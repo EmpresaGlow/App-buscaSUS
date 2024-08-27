@@ -5,9 +5,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Cadastro from './src/pages/cadastro/cadastro';
 import Login from './src/pages/Login/login';
-import Menu from './src/pages/Menu/menu';
+import Car from './src/pages/Home/carrossel';
 import Splash from './src/pages/splash/splash';
-import Caso1 from './src/pages/caso precise1/caso1';
+import Contato from './src/pages/Contato/contato';
+import Perfil from './src/pages/Perfil/perfil';
+import Home from './src/pages/Home/home';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -16,11 +19,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Cadastro" component={Cadastro} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Menu" component={Menu} />
+        <Stack.Screen name="Cadastro" component={Cadastro} options={{ headerShown: false }}/>
+        <Stack.Screen name="Login" component={Login}  options={{ headerShown: false }} />
+        <Stack.Screen name="Car" component={Car} />
         <Stack.Screen name="Splash" component={Splash} />
-        <Stack.Screen name="Caso1" component={Caso1} />
+        <Stack.Screen name="Contato" component={Contato} options={{ headerShown: false }}/>
+        <Stack.Screen name="Perfil" component={Perfil} options={{ headerShown: false }}/>
+        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );

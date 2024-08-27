@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const Splash = ({ navigation }) => {
+const Perfil = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>Slash</Text>
+      <Text>Perfil</Text>
       
       <Button 
         title="Login" 
@@ -14,13 +14,17 @@ const Splash = ({ navigation }) => {
         title="Cadastro" 
         onPress={() => navigation.navigate('Cadastro')} 
       />
+      {/* <Button 
+        title="Splash" 
+        onPress={() => navigation.navigate('Splash')} 
+      /> */}
       <Button 
-        title="Menu" 
-        onPress={() => navigation.navigate('Menu')} 
+        title="Contato" 
+        onPress={() => navigation.navigate('Contato')} 
       />
        <Button 
-        title="Caso" 
-        onPress={() => navigation.navigate('Caso1')} 
+        title="Home" 
+        onPress={() => navigation.navigate('Home')} 
       />
      
     </View>
@@ -35,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Splash;
+export default Perfil;
